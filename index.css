@@ -1,0 +1,162 @@
+:root {
+  --accent-bg: #EBD8CD;
+  --accent: #D2B1A2;
+}
+
+body {
+  display: flex;
+  margin: 0 auto;
+  font-family: lato, sans-serif;
+  line-height: 1.4;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 14px;
+  max-width: 1024px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: oswald, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.all-caps, .all-caps p {
+  text-transform: uppercase;
+}
+
+.print-button {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+a, a:visited {
+  color: #00008d;
+}
+
+a:hover, a:visited:hover {
+  text-decoration: underline;
+}
+
+aside {
+  flex: 2 2 20vw;
+  padding-top: 60px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+aside .aside-block {
+  width: 30vw;
+  margin: 0 auto 16px;
+  padding-bottom: 16px;
+  line-height: 1.8;
+}
+
+aside .aside-block h2 {
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+aside .aside-block ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+aside .aside-block.aside-main h1 {
+  font-size: 60px;
+  font-weight: normal;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+aside .aside-block.aside-main h2 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+aside picture img {
+  width: 100%;
+  max-width: 300px;
+  clip-path: circle(50% at center);
+  margin: auto;
+  display: block;
+}
+
+article {
+  flex: 3 3 30vw;
+  background-color: var(--accent-bg);
+}
+
+article section {
+  margin: 3vw;
+}
+
+article section header {
+  background-color: white;
+  padding: 12px;
+}
+
+article section header h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+article section > *:not(header) {
+  padding: 8px 4px;
+  margin: auto;
+}
+
+article section .work-experience-item h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+article section .work-experience-item ul {
+  margin: 0;
+}
+
+article section .work-experience-item ul li {
+  font-size: 14px;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  :root {
+    --accent: black;
+    --accent-bg: white;
+  }
+  html, body {
+    width: 210mm;
+    max-width: 210mm;
+    height: 296mm;
+    max-height: 296mm;
+    font-size: 12px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  article, article section, article section header {
+    margin: 0;
+    padding: 0;
+  }
+  article section header, article section p, article section div {
+    padding: 8px;
+  }
+  article section {
+    padding: 8px;
+  }
+  .hide-print {
+    visibility: hidden;
+  }
+}
