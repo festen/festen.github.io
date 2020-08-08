@@ -134,6 +134,9 @@ article section .work-experience-item ul li {
   body {
     flex-direction: column;
   }
+  aside {
+    flex: 2 0 auto;
+  }
   aside .aside-block {
     width: 80vw;
   }
