@@ -130,6 +130,15 @@ article section .work-experience-item ul li {
   margin: 0;
 }
 
+@media (max-width: 500px) {
+  body {
+    flex-direction: column;
+  }
+  aside .aside-block {
+    width: 80vw;
+  }
+}
+
 @media print {
   :root {
     --accent: black;
